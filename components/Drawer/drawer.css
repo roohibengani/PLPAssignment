@@ -1,0 +1,41 @@
+/* Drawer */
+.drawer {
+  position: unset;
+  width: max-content;
+  height: 100%;
+}
+
+.drawer-close-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .drawer-close-btn {
+    display: block;
+    width: var(--small-icon);
+    height: var(--small-icon);
+  }
+
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100%;
+    background-color: var(--color);
+    ;
+    transition: left 0.3s ease;
+    padding: 10px;
+  }
+}
+
+/* For Smaller Mobiles*/
+@media only screen and (max-width: 320px) {
+  .drawer {
+    width: 230px;
+  }
+}
